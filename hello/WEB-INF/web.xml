@@ -16,6 +16,11 @@
       <servlet-class>QueryServlet</servlet-class>
    </servlet>
 
+   <servlet>
+      <servlet-name>UserReport</servlet-name>
+      <servlet-class>ReportServlet</servlet-class>
+   </servlet>
+
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
  
@@ -27,6 +32,11 @@
    <servlet-mapping>
       <servlet-name>UserQuery</servlet-name>
       <url-pattern>/query</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>UserReport</servlet-name>
+      <url-pattern>/report</url-pattern>
    </servlet-mapping>
 
 </web-app>
