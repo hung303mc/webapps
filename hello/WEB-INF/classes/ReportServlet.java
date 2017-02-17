@@ -20,14 +20,14 @@ public class ReportServlet extends HttpServlet {  // JDK 1.6 and above only
       try {
          // Step 1: Allocate a database Connection object
          conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/ebookshop?useSSL=false", "myuser", "xxxx"); // <== Check!
+            "jdbc:mysql://localhost:3306/JrdReport?useSSL=false", "myuser", "xxxx"); // <== Check!
             // database-URL(hostname, port, default database), username, password
  
          // Step 2: Allocate a Statement object within the Connection
          stmt = conn.createStatement();
  
          // Step 3: Execute a SQL SELECT query
-         String sqlStr = "select * from ebookshop";
+         String sqlStr = "select * from TimeSheet";
  
          ResultSet rset = stmt.executeQuery(sqlStr);  // Send the query to the server
  
@@ -47,7 +47,7 @@ public class ReportServlet extends HttpServlet {  // JDK 1.6 and above only
                   +"<body>"
                   +"<table>"
                     +"<h1> Report about time using JRD machine </h1>"
-                    +"<form method=\"get\" action=\"http://localhost:9999/hello/Jrd_report\">"
+                    +"<form method=\"get\" action=\"http://localhost:9999/hello/report\">"
                       +"<input type=\"submit\" value=\"Update\">"
                     +"</form>"
                     +"<hr>"
